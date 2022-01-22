@@ -1,0 +1,8 @@
+<Projects>
+	<GoogleFonts type="Lib"/>
+	<GoogleFontsTest type="App">
+		<Desktop/>
+		<Android/>
+	</GoogleFontsTest>
+</Projects>
+
