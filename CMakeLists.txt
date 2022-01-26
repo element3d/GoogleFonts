@@ -38,6 +38,8 @@ endif()
 
 include_directories(GoogleFonts)
 add_subdirectory(GoogleFonts)
-include_directories(GoogleFontsTest)
-add_subdirectory(GoogleFontsTest)
+if (${ELEMENTARY_ENABLED} EQUAL 0)
+	include_directories(GoogleFontsTest)
+	add_subdirectory(GoogleFontsTest)
+endif()
 
