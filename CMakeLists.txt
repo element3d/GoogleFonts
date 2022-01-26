@@ -36,6 +36,12 @@ elseif(UNIX)
     link_directories(${LIBS_DIR}/Linux)
 endif()
 
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/elementary)
+	set (ELEMENTARY_ENABLED 1)
+	include(${CMAKE_CURRENT_SOURCE_DIR}/elementary/CMakeLists.txt)
+	set (ELEMENTARY_ENABLED 0)
+endif()
+
 include_directories(GoogleFonts)
 add_subdirectory(GoogleFonts)
 if (${ELEMENTARY_ENABLED} EQUAL 0)
